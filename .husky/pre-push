@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+echo "🔍 Running pre-push checks..."
+
+echo "🏗️ Check build script.."
+if ! npm run build; then
+    echo "❌ Build script failed. Please fix the issues and try again."
+    exit 1
+fi
+
+echo "✅ Pre-push checks completed successfully!"
+

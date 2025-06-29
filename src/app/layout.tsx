@@ -1,15 +1,14 @@
+import Navbar from "@/components/ui/navbar";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Saira } from "next/font/google";
+
 import "./globals.css";
+import Providers from "./providers";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const saira = Saira({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-saira",
+  weight: ["700", "600", "500", "400"],
 });
 
 export const metadata: Metadata = {
@@ -23,11 +22,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" className="dark">
+      <body className={`${saira.variable} antialiased`}>
+        <Providers>
+          <Navbar />
+          {children}
+          <footer className="min-h-20 border-t border-white/10 outline-2 outline-offset-4 outline-white/10 flex items-center p-4">
+            <p className="mx-auto text-7xl uppercase font-bold bg-gradient-to-b from-white via-white/10 to-black from bg-clip-text text-transparent opacity-25">
+              Liquid Arena
+            </p>
+          </footer>
+        </Providers>
       </body>
     </html>
   );

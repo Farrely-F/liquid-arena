@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+
+set -e # Exit on any error
+
+echo "🔍 Running pre-commit checks..."
+
+# Run lint-staged for formatting and linting
+echo "📝 Checking code formatting and linting..."
+if ! npx lint-staged; then
+  echo "❌ Linting/formatting failed. Please fix the issues and try again."
+  exit 1
+fi
+
+# Run type checking
+echo "🔧 Running TypeScript type checking..."
+if ! npm run type-check; then
+  echo "❌ Type checking failed. Please fix the type errors and try again."
+  exit 1
+fi
+
+if ! npm run lint; then
+  echo "❌ Linting failed. Please fix the issues and try again."
+  exit 1
+fi
+
+echo "✅ All pre-commit checks passed!"
