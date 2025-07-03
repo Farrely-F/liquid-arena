@@ -7,7 +7,7 @@ export default function HowItWorksSection() {
   const [selected, setSelected] = useState(0);
 
   return (
-    <section className="bg-black container mx-auto p-4 min-h-[600px] flex flex-col">
+    <section className="bg-black container mx-auto px-4 lg:px-12 min-h-[600px] flex flex-col">
       <div className="text-center max-w-3xl space-y-2 mx-auto">
         <h2 className="font-bold text-3xl lg:text-5xl">How it works</h2>
         <p>

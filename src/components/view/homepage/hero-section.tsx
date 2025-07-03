@@ -8,7 +8,7 @@ export default function HeroSection() {
   const { openConnectModal } = useConnectModal();
 
   return (
-    <section className="min-h-dvh lg:max-h-[1080px] lg:py-20 p-6 lg:px-8 bg-gradient-to-b from-slate-900 via-gray-800 to-black container mx-auto flex flex-col lg:flex-row gap-2 items-center">
+    <section className="min-h-dvh lg:max-h-[1080px] lg:py-20 p-6 lg:px-12 bg-gradient-to-b from-slate-900 via-gray-800 to-black container mx-auto flex flex-col lg:flex-row gap-2 items-center">
       <div className="lg:max-w-xl space-y-4">
         <div>
           <p className="italic">Stake. Predict. Conquer.</p>
@@ -30,11 +30,11 @@ export default function HeroSection() {
       </div>
       <div className="lg:w-1/2 h-full">
         <Image
-          src="/hero-section.png"
+          src="/cyber-knight.png"
           alt="hero image"
           width={512}
           height={512}
-          className="w-full h-auto mix-blend-exclusion rotate-6 saturate-50 opacity-20"
+          className="w-full h-auto mix-blend-exclusion rotate-6"
         />
       </div>
     </section>

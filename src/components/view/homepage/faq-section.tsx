@@ -7,8 +7,8 @@ import {
 
 export default function FaqSection() {
   return (
-    <section className="min-h-[600px] max-w-6xl mx-auto bg-black w-full p-8 space-y-6">
-      <div className="text-end">
+    <section className="min-h-[600px] max-w-6xl mx-auto bg-black w-full px-8 space-y-6">
+      <div className="text-end bg-gradient-to-r from-transparent via-gray-100/10 py-6 to-transparent">
         <h2 className="font-bold text-3xl lg:text-5xl">FAQ</h2>
         <p>Frequently user asked questions</p>
       </div>
